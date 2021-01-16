@@ -4,6 +4,7 @@ import {
   FooterWrapper,
   FooterSocialWrapper,
   FooterSocialIcons,
+  P,
 } from "../elements"
 
 export const Footer = () => {
@@ -23,6 +24,9 @@ export const Footer = () => {
       }
     }
   `)
+
+  const date = new Date()
+  const year = date.getFullYear()
 
   return (
     <FooterWrapper>
@@ -57,7 +61,9 @@ export const Footer = () => {
             <img src={data.twitter.publicURL} alt="Twitter" />
           </a>
         </FooterSocialIcons>
-        <p>All rights reserved &copy;</p>
+        <P size="xSmall" color="dark3">
+          &reg; {year} Company. All rights reserved
+        </P>
       </FooterSocialWrapper>
     </FooterWrapper>
   )
